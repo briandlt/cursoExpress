@@ -1,0 +1,21 @@
+extends ./layout.pug
+block contenido
+    div.col-md-6.mx-auto.remove-float.big-top-space
+      form(method='POST' action='/users')
+        div.form-group
+          label(for='email') Correo:
+          input#email.form-control(type='text', placeholder='name@email.com' name='email')
+        div.form-group
+          label(for='username') Username:
+          input#username.form-control(type='text', placeholder='Username' name='username')
+        div.form-group
+          label(for='password') Contraseña:
+          input#password.form-control(type='password', placeholder='Password' name='password')
+        div.form-group
+          label(for='password_confirmation') Confirma contraseña:
+          input#password.form-control(type='password', placeholder='Password' name='password_confirmation')
+        div.row
+          div.col-xs-12.col-sm-6
+            button.btn.btn-primary(type='submit') Enviar
+          div.col-xs-12.col-sm-6.text-right
+            a(href="/login") Ya tengo una cuenta!

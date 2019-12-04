@@ -1,0 +1,15 @@
+extends ./layout.pug
+block contenido
+    div.col-md-6.mx-auto.remove-float.big-top-space
+      form(method='POST' action='/sessions')
+            div.form-group
+              label(for='email') Correo:
+              input#email.form-control(type='text', placeholder='name@email.com' name='email')
+            div.form-group
+              label(for='password') Contraseña:
+              input#password.form-control(type='password', placeholder='Password' name='password')
+            div.row
+              div.col-xs-12.col-sm-6
+                button.btn.btn-primary(type='submit') Enviar
+              div.col-xs-12.col-sm-6.text-right
+                a(href="/signup") Aun no tengo una cuenta!

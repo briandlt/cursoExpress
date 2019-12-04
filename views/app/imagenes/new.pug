@@ -1,0 +1,14 @@
+extends ../../layout.pug
+block contenido
+    div.col-md-6.mx-auto.remove-float.big-top-space
+      h1 Subir nueva imagen
+      form(method='POST' action='/app/imagenes')
+            div.form-group
+              label(for='title') Título
+              input#title.form-control(type='text', placeholder='Título de la imagen...' name='title')
+            div.form-group
+              label(for='archivo') Imagen
+              input#password.form-control(type='file', name='archivo')
+            div.row
+              div.col-xs-12.col-sm-6
+                button.btn.btn-primary(type='submit') Enviar
